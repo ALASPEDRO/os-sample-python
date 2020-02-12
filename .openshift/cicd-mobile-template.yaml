@@ -142,9 +142,8 @@ objects:
               stage ("Install Dependencies") {
                 steps {
                   sh """
-                  pip install virtualenv
-                  virtualenv --no-site-packages .
-                  source bin/activate
+                  python -m venv venv
+                  source venv/bin/activate
                   pip install -r requirements.pip
                   deactivate
                   """
@@ -153,7 +152,7 @@ objects:
               stage('Run Tests') {
                 steps {
                     sh '''
-                    source bin/activate
+                    source venv/bin/activate
                     nosetests --with-xunit
                     deactivate
                     '''
