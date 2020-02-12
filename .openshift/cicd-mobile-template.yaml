@@ -15,7 +15,7 @@ parameters:
   name: DEV_PROJECT
   required: true
 - displayName: STAGE project name
-  value: stage
+  value: uat
   name: STAGE_PROJECT
   required: true
 - displayName: STAGE TAG with version.release.modification format
