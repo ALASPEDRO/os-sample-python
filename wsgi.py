@@ -11,7 +11,7 @@ HOST = os.environ.get("POSTGRESQL_HOSTNAME")
 
 @application.route('/')
 def hello_world():
-    return 'Hello - Python!'
+    return 'Hello - from the Python back!'
 
 @application.route('/postgresql')
 def health_check():
